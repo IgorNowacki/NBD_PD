@@ -1,0 +1,223 @@
+
+############################################
+1
+############################################
+
+igor@DESKTOP-LK9GP2Q:/mnt/c/users/igorn/Downloads/nbd-master/lab06$ curl http://localhost:8098/types/default/buckets/s26365/props -i -v -X PUT --header 'Content-Type: application/json' --data '{"props":{}}'
+*   Trying 127.0.0.1:8098...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /types/default/buckets/s26365/props HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.68.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 12
+>
+* upload completely sent off: 12 out of 12 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 204 No Content
+HTTP/1.1 204 No Content
+< Vary: Accept-Encoding
+Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Date: Sun, 03 Jul 2022 11:31:25 GMT
+Date: Sun, 03 Jul 2022 11:31:25 GMT
+< Content-Type: application/json
+Content-Type: application/json
+< Content-Length: 0
+Content-Length: 0
+
+<
+* Connection #0 to host localhost left intact
+
+############################################
+1.1
+############################################
+
+igor@DESKTOP-LK9GP2Q:/mnt/c/users/igorn/Downloads/nbd-master/lab06$ curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-1?returnbody=true -i -v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "John", "lastName": "Elton", "age": 27, "isEmployed": true}'
+*   Trying 127.0.0.1:8098...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /types/default/buckets/s26365/keys/zapytanie1-1?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.68.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 73
+>
+* upload completely sent off: 73 out of 73 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvtezSFsHEUpkzGNlSP1leocvCwA=
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvtezSFsHEUpkzGNlSP1leocvCwA=
+< Vary: Accept-Encoding
+Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Link: </buckets/s26365>; rel="up"
+Link: </buckets/s26365>; rel="up"
+< Last-Modified: Sun, 03 Jul 2022 11:32:54 GMT
+Last-Modified: Sun, 03 Jul 2022 11:32:54 GMT
+< ETag: "6BVMuQjLOiUG2Eqf71dvQN"
+ETag: "6BVMuQjLOiUG2Eqf71dvQN"
+< Date: Sun, 03 Jul 2022 11:32:54 GMT
+Date: Sun, 03 Jul 2022 11:32:54 GMT
+< Content-Type: application/json
+Content-Type: application/json
+< Content-Length: 73
+Content-Length: 73
+
+<
+* Connection #0 to host localhost left intact
+{"firstName": "John", "lastName": "Elton", "age": 27, "isEmployed": true}
+
+############################################
+1.2
+############################################
+
+igor@DESKTOP-LK9GP2Q:/mnt/c/users/igorn/Downloads/nbd-master/lab06$ curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-2?returnbody=true -i -v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "Michael", "lastName": "Jackson", "age": 20, "isEmployed": false}'
+*   Trying 127.0.0.1:8098...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /types/default/buckets/s26365/keys/zapytanie1-2?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.68.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 79
+>
+* upload completely sent off: 79 out of 79 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvtczU9KFCCUy5rEy3PxjeocvCwA=
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvtczU9KFCCUy5rEy3PxjeocvCwA=
+< Vary: Accept-Encoding
+Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Link: </buckets/s26365>; rel="up"
+Link: </buckets/s26365>; rel="up"
+< Last-Modified: Sun, 03 Jul 2022 11:43:21 GMT
+Last-Modified: Sun, 03 Jul 2022 11:43:21 GMT
+< ETag: "aF7T7yaFy5vapTtkhEycS"
+ETag: "aF7T7yaFy5vapTtkhEycS"
+< Date: Sun, 03 Jul 2022 11:43:21 GMT
+Date: Sun, 03 Jul 2022 11:43:21 GMT
+< Content-Type: application/json
+Content-Type: application/json
+< Content-Length: 79
+Content-Length: 79
+
+<
+* Connection #0 to host localhost left intact
+{"firstName": "Michael", "lastName": "Jackson", "age": 20, "isEmployed": false}i
+
+############################################
+1.3
+############################################
+
+igor@DESKTOP-LK9GP2Q:/mnt/c/users/igorn/Downloads/nbd-master/lab06$ curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-3?returnbody=true -i v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "Phil", "lastName": "Colins", "age": 53, "isEmployed": false}'
+HTTP/1.1 200 OK
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvtezuL8UIpTImMfKwP3X9A5fFgA=
+Vary: Accept-Encoding
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Link: </buckets/s26365>; rel="up"
+Last-Modified: Sun, 03 Jul 2022 11:44:11 GMT
+ETag: "3TPaNrVu2ZMGacLEwANzf"
+Date: Sun, 03 Jul 2022 11:44:11 GMT
+Content-Type: application/json
+Content-Length: 75
+
+{"firstName": "Phil", "lastName": "Colins", "age": 53, "isEmployed": false}
+
+
+############################################
+1.4
+############################################
+
+
+igor@DESKTOP-LK9GP2Q:/mnt/c/users/igorn/Downloads/nbd-master/lab06$ curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-4?returnbody=true -i -v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "Tom", "lastName": "Cruise", "age": 55, "isEmployed": false}'
+*   Trying 127.0.0.1:8098...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /types/default/buckets/s26365/keys/zapytanie1-4?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.68.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 74
+>
+* upload completely sent off: 74 out of 74 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvtczU10NZDNlMCUy5rEyuP01vcOXBQA=
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvtczU10NZDNlMCUy5rEyuP01vcOXBQA=
+< Vary: Accept-Encoding
+Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Link: </buckets/s26365>; rel="up"
+Link: </buckets/s26365>; rel="up"
+< Last-Modified: Sun, 03 Jul 2022 11:45:10 GMT
+Last-Modified: Sun, 03 Jul 2022 11:45:10 GMT
+< ETag: "7hPGquZ3pBKRwk9cw3X33V"
+ETag: "7hPGquZ3pBKRwk9cw3X33V"
+< Date: Sun, 03 Jul 2022 11:45:10 GMT
+Date: Sun, 03 Jul 2022 11:45:10 GMT
+< Content-Type: application/json
+Content-Type: application/json
+< Content-Length: 74
+Content-Length: 74
+
+<
+* Connection #0 to host localhost left intact
+{"firstName": "Tom", "lastName": "Cruise", "age": 55, "isEmployed": false}
+
+
+############################################
+1.5
+############################################
+
+igor@DESKTOP-LK9GP2Q:/mnt/c/users/igorn/Downloads/nbd-master/lab06$
+igor@DESKTOP-LK9GP2Q:/mnt/c/users/igorn/Downloads/nbd-master/lab06$ curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-5?returnbody=true -i -v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "Bob", "lastName": "Murley", "age": 42, "isEmployed": true}'
+*   Trying 127.0.0.1:8098...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /types/default/buckets/s26365/keys/zapytanie1-5?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.68.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 73
+>
+* upload completely sent off: 73 out of 73 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvtezVHwOEUpkzGNlyPlreocvCwA=
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvtezVHwOEUpkzGNlyPlreocvCwA=
+< Vary: Accept-Encoding
+Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Link: </buckets/s26365>; rel="up"
+Link: </buckets/s26365>; rel="up"
+< Last-Modified: Sun, 03 Jul 2022 11:45:48 GMT
+Last-Modified: Sun, 03 Jul 2022 11:45:48 GMT
+< ETag: "67IfiwMqkCFzYPkmNDdTKV"
+ETag: "67IfiwMqkCFzYPkmNDdTKV"
+< Date: Sun, 03 Jul 2022 11:45:48 GMT
+Date: Sun, 03 Jul 2022 11:45:48 GMT
+< Content-Type: application/json
+Content-Type: application/json
+< Content-Length: 73
+Content-Length: 73
+
+<
+* Connection #0 to host localhost left intact
+{"firstName": "Bob", "lastName": "Murley", "age": 42, "isEmployed": true}

@@ -1,0 +1,34 @@
+MongoDB shell version v3.6.8
+connecting to: mongodb://127.0.0.1:27017/nbd
+Implicit session: session { "id" : UUID("b7766086-fea8-45c8-bc13-2c28476f1d78") }
+MongoDB server version: 3.6.8
+[
+	{
+		"_id" : ObjectId("629510cdb125b4483c95eeff"),
+		"sex" : "Male",
+		"first_name" : "Igor",
+		"last_name" : "Nowacki",
+		"job" : "Engineer",
+		"email" : "papaja@stumbleupon.com",
+		"location" : {
+			"city" : "Warsaw",
+			"address" : {
+				"streetname" : "Cybernetyki",
+				"streetnumber" : "69"
+			}
+		},
+		"description" : "nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et",
+		"height" : "186",
+		"weight" : "92",
+		"birth_date" : "1997-06-20T02:13:40Z",
+		"nationality" : "Poland",
+		"credit" : [
+			{
+				"type" : "BMW M5",
+				"number" : "3582874312331703",
+				"currency" : "PLN",
+				"balance" : "5000000"
+			}
+		]
+	}
+]

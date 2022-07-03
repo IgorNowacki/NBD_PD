@@ -1,0 +1,11 @@
+$ python3 main.py
+Newly created document:
+{'firstName': 'John', 'lastName': 'Elton', 'age': 27, 'isEmployed': True}
+
+
+Modified document:
+{'firstName': 'John', 'lastName': 'Elton', 'age': 27, 'isEmployed': False}
+
+
+Deleted document:
+None

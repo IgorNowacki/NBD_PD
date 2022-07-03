@@ -1,0 +1,40 @@
+
+
+############################################
+2
+############################################
+
+igor@DESKTOP-LK9GP2Q:/mnt/c/users/igorn/Downloads/nbd-master/lab06$ curl -i -v http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-1
+*   Trying 127.0.0.1:8098...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> GET /types/default/buckets/s26365/keys/zapytanie1-1 HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.68.0
+> Accept: */*
+>
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvtezSFsHEUpkzGNlSP1leocvCwA=
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvtezSFsHEUpkzGNlSP1leocvCwA=
+< Vary: Accept-Encoding
+Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Link: </buckets/s26365>; rel="up"
+Link: </buckets/s26365>; rel="up"
+< Last-Modified: Sun, 03 Jul 2022 11:32:54 GMT
+Last-Modified: Sun, 03 Jul 2022 11:32:54 GMT
+< ETag: "6BVMuQjLOiUG2Eqf71dvQN"
+ETag: "6BVMuQjLOiUG2Eqf71dvQN"
+< Date: Sun, 03 Jul 2022 11:48:49 GMT
+Date: Sun, 03 Jul 2022 11:48:49 GMT
+< Content-Type: application/json
+Content-Type: application/json
+< Content-Length: 73
+Content-Length: 73
+
+<
+* Connection #0 to host localhost left intact
+{"firstName": "John", "lastName": "Elton", "age": 27, "isEmployed": true}

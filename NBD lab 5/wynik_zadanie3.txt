@@ -1,0 +1,44 @@
+
+
+############################################
+3
+############################################
+
+
+igor@DESKTOP-LK9GP2Q:/mnt/c/users/igorn/Downloads/nbd-master/lab06$ curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-1?returnbody=true -i -v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "John", "lastName": "Elton", "age": 27, "isEmployed": true, "jobTitle": "Singer"}'
+*   Trying 127.0.0.1:8098...
+* TCP_NODELAY set
+* Connected to localhost (127.0.0.1) port 8098 (#0)
+> PUT /types/default/buckets/s26365/keys/zapytanie1-1?returnbody=true HTTP/1.1
+> Host: localhost:8098
+> User-Agent: curl/7.68.0
+> Accept: */*
+> Content-Type: application/json
+> Content-Length: 95
+>
+* upload completely sent off: 95 out of 95 bytes
+* Mark bundle as not supporting multiuse
+< HTTP/1.1 200 OK
+HTTP/1.1 200 OK
+< X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvtezSFsHEUpkymNlcPlveocvCwA=
+X-Riak-Vclock: a85hYGBgzGDKBVI8+xkWvtezSFsHEUpkymNlcPlveocvCwA=
+< Vary: Accept-Encoding
+Vary: Accept-Encoding
+< Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+Server: MochiWeb/1.1 WebMachine/1.10.9 (cafe not found)
+< Link: </buckets/s26365>; rel="up"
+Link: </buckets/s26365>; rel="up"
+< Last-Modified: Sun, 03 Jul 2022 11:53:40 GMT
+Last-Modified: Sun, 03 Jul 2022 11:53:40 GMT
+< ETag: "59DOsaHPMuE5qDudXUHkYI"
+ETag: "59DOsaHPMuE5qDudXUHkYI"
+< Date: Sun, 03 Jul 2022 11:53:40 GMT
+Date: Sun, 03 Jul 2022 11:53:40 GMT
+< Content-Type: application/json
+Content-Type: application/json
+< Content-Length: 95
+Content-Length: 95
+
+<
+* Connection #0 to host localhost left intact
+{"firstName": "John", "lastName": "Elton", "age": 27, "isEmployed": true, "jobTitle": "Singer"}

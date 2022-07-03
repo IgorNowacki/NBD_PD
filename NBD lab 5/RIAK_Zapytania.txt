@@ -1,0 +1,95 @@
+############################################
+1
+############################################
+
+curl http://localhost:8098/types/default/buckets/s26365/props -i -v -X PUT --header 'Content-Type: application/json' --data '{"props":{}}'
+
+############################################
+1.1
+############################################
+
+curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-1?returnbody=true -i -v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "John", "lastName": "Elton", "age": 27, "isEmployed": true}'
+
+############################################
+1.2
+############################################
+
+curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-2?returnbody=true -i -v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "Michael", "lastName": "Jackson", "age": 20, "isEmployed": false}'
+
+############################################
+1.3
+############################################
+curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-3?returnbody=true -i v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "Phil", "lastName": "Colins", "age": 53, "isEmployed": false}'
+
+############################################
+1.4
+############################################
+
+curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-4?returnbody=true -i -v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "Tom", "lastName": "Cruise", "age": 55, "isEmployed": false}'
+
+############################################
+1.5
+############################################
+
+curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-5?returnbody=true -i -v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "Bob", "lastName": "Murley", "age": 42, "isEmployed": true}'
+
+############################################
+2
+############################################
+
+curl -i -v http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-1
+
+############################################
+3
+############################################
+
+curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-1?returnbody=true -i -v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "John", "lastName": "Elton", "age": 27, "isEmployed": true, "jobTitle": "Singer"}'
+
+############################################
+4
+############################################
+
+
+curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-1?returnbody=true -i -v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "John", "lastName": "Elton", "age": 27, "isEmployed": true}'
+
+############################################
+5
+############################################
+
+curl http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-1?returnbody=true -i -v -X PUT --header 'Content-Type: application/json' --data '{"firstName": "John", "lastName": "Elton", "age": 31, "isEmployed": true}'
+
+############################################
+6
+############################################
+
+curl -i -v -X DELETE http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-4
+
+############################################
+7
+############################################
+
+curl -i -v http://localhost:8098/types/default/buckets/s26365/keys/zapytanie1-4
+
+############################################
+8
+############################################
+
+curl http://localhost:8098/types/default/buckets/s26365/keys/?returnbody=true -i -v -X POST --header 'Content-Type: application/json' --data '{"firstName": "Denis"}'
+
+############################################
+9
+############################################
+
+9.1 
+
+curl -i -v http://localhost:8098/buckets/s26365/keys?keys=true
+
+9.2
+
+curl -i -v http://localhost:8098/types/default/buckets/s26365/keys/HuxDvSWmvnrBamZKNVAAD3M7EmY
+
+############################################
+10
+############################################
+
+curl -i -v -X DELETE http://localhost:8098/types/default/buckets/s26365/keys/HuxDvSWmvnrBamZKNVAAD3M7EmY
